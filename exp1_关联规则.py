@@ -1,5 +1,4 @@
 #-*- coding: utf-8 -*-
-# K-Means聚类算法
 
 import pandas as pd
 import numpy as np
@@ -126,7 +125,7 @@ if __name__=='__main__':
     #rules.to_csv(rulepath)
 
     # rules = pd.read_csv(rulepath)
-    # data = data[:2000] # 不然很慢的
+    # # data = data[:2000] # 不然很慢的
     # tag_lsit = get_everyKind(data, rules)
     # with open(tagpath, 'w', encoding='utf-8') as file:
     #     file.write("\n".join(tag_lsit))

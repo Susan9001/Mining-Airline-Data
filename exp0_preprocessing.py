@@ -71,5 +71,5 @@ if __name__ == '__main__':
 
     data = pd.read_csv(okfile, encoding='utf-8')
     data_with_indicator = proc_indecator(data)
-    data_with_indicator.to_csv(ind_file, index=False)
+    data_with_indicator.sample(5000).to_csv(ind_file, index=False) # 只选其中2000个样品
 
