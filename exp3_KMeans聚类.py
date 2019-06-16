@@ -3,7 +3,7 @@
 import pandas as pd
 import numpy as np
 import math
-from functools import reduce
+from sklearn.metrics import silhouette_score
 
 def getDistance(xlist1:list, xlist2:list):
     '''获取xlist1和xlist2欧氏距离'''
@@ -36,8 +36,7 @@ def clusterByKMeans(data, k=3) :
             for j in range(k):
                 curr_min = getDistance(centers[j, :], data[i, :])
                 if curr_min < min_dis: # 更新最小距离
-                    min_dis = curr_min
-                    min_index = j
+                    min_dis, min_index = curr_min, j
             if res_cluster[i, 0] != min_index:
                 hasChanges = True  # 若变了，则要继续迭代
             res_cluster[i, :] = min_index, min_dis ** 2  # 第i个数据点的分配情况存入字典
@@ -51,18 +50,26 @@ def clusterByKMeans(data, k=3) :
 
 if __name__ == '__main__':
     filepath = './data/air_LRFMC.csv'
-    respath = './data/kmeans_result.csv'
-    data = pd.read_csv(filepath)
+    resp = './data/kmeans_result_'
+    data = pd.read_csv(filepath).sample(2000).iloc[:,1:]
     mData = data.as_matrix()
-    centers, res_cluster = clusterByKMeans(mData)
-    print("-----------centers------------")
-    print(centers)
-    print("-----------result------------")
-    print(res_cluster)
-    # 保存
-    cluster_list = [int(res_cluster[i,0]) for i in range(len(res_cluster))]
-    data = pd.concat([data, pd.Series(cluster_list, index=data.index)], axis=1)
-    data.to_csv(respath)
+
+    best_k = 2
+    best_score = -1
+    best_pred = pd.Series() # pred即cluster分配
+    for k in range(2, 7):
+        centers, res_cluster = clusterByKMeans(mData)
+        cluster_list = [int(res_cluster[k,0]) for k in range(len(res_cluster))] # 转为pd.Series
+        y_pred = pd.Series(cluster_list, index=data.index)
+        # 按照轮廓系数打分，并更新最佳的k
+        curr_score = silhouette_score(data, y_pred)
+        print("k = %d, 轮廓系数打分%f" % (k, curr_score))
+        if curr_score > best_score:
+            best_score, best_k, best_pred = curr_score, k, y_pred
+
+    # 保存最佳的
+    print("最佳k = %d, 轮廓系数%f" % (best_k, best_score))
+    pd.concat([data, best_pred], axis=1).to_csv(resp + str(best_k) + ".csv")
 
 
 

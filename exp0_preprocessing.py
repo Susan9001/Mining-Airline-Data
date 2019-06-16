@@ -22,10 +22,8 @@ def simplify_data(data):
     '''
     选择比较有用的6个属性: FFP_DATE、LOAD_TIME、FLIGHT_COUNT、AVG_DISCOUNT、SEG_KM_SUM、LAST_TO_END
     分别是：第一次飞行日期，观察窗口结束时间，飞行次数，平均折扣，总飞行公里数，（到观察结束为止）多少未飞行
-    并且把日期转换为
     :param datafile: input path
     :param okfile: output filepath
-    :return: output
     '''
     valid_keys = ["FFP_DATE", "LOAD_TIME", "FLIGHT_COUNT", "avg_discount", "SEG_KM_SUM", "LAST_TO_END"]
     data = data[valid_keys]
@@ -37,11 +35,12 @@ def proc_indecator(data):
     '''
     获取以下5个对于客户的评价指标，并进行正则化
     客户关系时长L、消费时间间隔R、消费频率F、飞行里程M和折扣系数的平均值C五个指
+    日期均为月份的差值
     :param datafile: input path
     :return: output
     '''
     res_data = pd.DataFrame()
-    # L: 乘客入会了的月份数，代表新/老程度
+    # L: 乘客入会日期与乘客里最早入会的日期的差值，按月（30天）算算代表新/老程度
     ffp_time = pd.to_datetime(data["FFP_DATE"], format="%Y/%m/%d")
     load_time = pd.to_datetime(data["LOAD_TIME"], format="%Y/%m/%d")
     res_data["L"] = (load_time - ffp_time).apply(lambda x: int(int(((str(x)).split()[0])) / 30))
@@ -54,12 +53,7 @@ def proc_indecator(data):
     # C: 平均折扣率
     res_data["C"] = data['avg_discount']
     # 标准化
-    print("---------before-------------")
-    print(res_data.head(10))
-    # res_data = (res_data - res_data.mean(axis = 0)) / (res_data.std(axis = 0))
     res_data = (res_data - res_data.min()) / (res_data.max() - res_data.min())
-    print("----------after--------------")
-    print(res_data.head(10))
     return res_data
 #%%
 

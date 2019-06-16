@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4fc846b-e7b4-421e-9504-a9e08fb5b238" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/exp2_K近邻分类.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exp3_KMeans聚类.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/air_LRFMC.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/air_LRFMC.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/rules.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/rules.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/association_result.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/kmeans_result.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/knn_both.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/knn_pred.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/knn_true.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/exp0_preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/exp0_preprocessing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exp1_关联规则.py" beforeDir="false" afterPath="$PROJECT_DIR$/exp1_关联规则.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exp2_K近邻分类.py" beforeDir="false" afterPath="$PROJECT_DIR$/exp2_K近邻分类.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exp3_KMeans聚类.py" beforeDir="false" afterPath="$PROJECT_DIR$/exp3_KMeans聚类.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/svm.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/实验笔记.docx" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,18 +22,31 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/1$exp1_data_clean.coverage" NAME="exp1_data_clean Coverage Results" MODIFIED="1559027159891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/$exp2_K.coverage" NAME="exp2_K近邻分类 Coverage Results" MODIFIED="1560616309289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/$exp3_KMeans.coverage" NAME="exp3_KMeans聚类 Coverage Results" MODIFIED="1560618472721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/$exp2_K.coverage" NAME="exp2_K近邻分类 Coverage Results" MODIFIED="1560655846737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/$exp3_KMeans.coverage" NAME="exp3_KMeans聚类 Coverage Results" MODIFIED="1560665854449" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$exp1_clusterLabel.coverage" NAME="exp1_clusterLabel Coverage Results" MODIFIED="1559211180974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$exp0_preprocessing.coverage" NAME="exp0_preprocessing Coverage Results" MODIFIED="1559197809773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/$exp1_.coverage" NAME="exp1_关联规则 Coverage Results" MODIFIED="1560668062532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exp1_关联规则.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-616">
-              <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
+            <state relative-caret-position="-290">
+              <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
+              <folding>
+                <element signature="e#24#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/exp0_preprocessing.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-95">
+              <caret line="47" column="38" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -37,11 +54,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exp2_K近邻分类.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="68" column="42" selection-start-line="68" selection-start-column="42" selection-end-line="68" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="528">
+              <caret line="79" column="68" selection-start-line="79" selection-start-column="68" selection-end-line="79" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -49,10 +63,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exp3_KMeans聚类.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1364">
-              <caret line="62" column="44" selection-start-line="62" selection-start-column="44" selection-end-line="62" selection-end-column="44" />
+            <state relative-caret-position="15">
+              <caret line="55" selection-start-line="55" selection-end-line="55" />
               <folding>
-                <element signature="e#25#44#0" expanded="true" />
+                <element signature="e#24#43#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,18 +97,18 @@
         <option value="$PROJECT_DIR$/exp1_apriori_rules.py" />
         <option value="$PROJECT_DIR$/exp1_apriori.py" />
         <option value="$PROJECT_DIR$/exp1_clusterLabel.py" />
+        <option value="$PROJECT_DIR$/exp2_K近邻分类.py" />
         <option value="$PROJECT_DIR$/exp0_preprocessing.py" />
         <option value="$PROJECT_DIR$/exp1_关联规则.py" />
-        <option value="$PROJECT_DIR$/exp2_K近邻分类.py" />
         <option value="$PROJECT_DIR$/exp3_KMeans聚类.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="778" />
-    <option name="y" value="82" />
-    <option name="width" value="1944" />
-    <option name="height" value="1044" />
+    <option name="x" value="-11" />
+    <option name="y" value="-11" />
+    <option name="width" value="1943" />
+    <option name="height" value="1043" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -141,7 +155,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.exp3_KMeans聚类">
+  <component name="RunManager" selected="Python.exp1_关联规则">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="实验1关联规则" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -186,6 +200,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="exp1_关联规则" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="实验1关联规则" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_64\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/exp1_关联规则.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="exp1_clusterLabel" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="实验1关联规则" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -200,28 +236,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="D:\Documents\数据挖掘\课程设计与实验\exp1_关联规则.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="exp1_data_clean" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="实验1关联规则" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_64\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\Documents\数据挖掘\实验1关联规则\exp1_preprocessing.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -276,18 +290,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.exp0_preprocessing" />
-      <item itemvalue="Python.exp1_data_clean" />
       <item itemvalue="Python.exp1_clusterLabel" />
       <item itemvalue="Python.exp2_K近邻分类" />
       <item itemvalue="Python.exp3_KMeans聚类" />
+      <item itemvalue="Python.exp1_关联规则" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.exp1_关联规则" />
         <item itemvalue="Python.exp3_KMeans聚类" />
         <item itemvalue="Python.exp2_K近邻分类" />
         <item itemvalue="Python.exp1_clusterLabel" />
         <item itemvalue="Python.exp0_preprocessing" />
-        <item itemvalue="Python.exp1_data_clean" />
       </list>
     </recent_temporary>
   </component>
@@ -307,11 +321,12 @@
       <workItem from="1559629293545" duration="2185000" />
       <workItem from="1560579482218" duration="15144000" />
       <workItem from="1560608363321" duration="8277000" />
+      <workItem from="1560650962559" duration="16756000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50747000" />
+    <option name="totallyTimeSpent" value="67503000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -325,7 +340,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49837133" weight="0.1720517" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49837133" weight="0.17138238" />
       <window_info id="Structure" order="1" sideWeight="0.50162864" side_tool="true" weight="0.19320938" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
@@ -335,8 +350,8 @@
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.5004042" side_tool="true" weight="0.26159555" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.24675325" />
-      <window_info anchor="bottom" id="Debug" order="8" sideWeight="0.4995958" weight="0.44341373" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.10760668" />
+      <window_info anchor="bottom" id="Debug" order="8" sideWeight="0.4995958" weight="0.42115027" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="11" weight="0.3283859" />
@@ -347,10 +362,10 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="4" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="5" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="6" weight="0.25" />
-      <window_info anchor="right" id="Python Console" order="7" sideWeight="0.49536178" visible="true" weight="0.3694422" />
+      <window_info active="true" anchor="right" id="Python Console" order="7" sideWeight="0.49536178" visible="true" weight="0.4139046" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49837133" weight="0.17219079" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49837133" weight="0.17138238" />
       <window_info id="Structure" order="1" sideWeight="0.50162864" side_tool="true" weight="0.19320938" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
@@ -360,19 +375,19 @@
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.5004042" side_tool="true" weight="0.26159555" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.24675325" />
-      <window_info anchor="bottom" id="Debug" order="8" sideWeight="0.4995958" weight="0.42857143" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.4025974" />
+      <window_info anchor="bottom" id="Debug" order="8" sideWeight="0.4995958" visible="true" weight="0.049759228" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info anchor="bottom" id="TODO" order="11" weight="0.3283859" />
       <window_info anchor="right" id="JSON Viewer" order="0" />
       <window_info anchor="right" x="0" y="0" width="273" height="495" id="Documentation" order="1" sideWeight="0.5046382" side_tool="true" weight="0.2829426" />
-      <window_info anchor="right" auto_hide="true" x="357" y="71" width="566" height="539" id="SciView" order="2" show_stripe_button="false" type="FLOATING" />
+      <window_info anchor="right" auto_hide="true" x="595" y="175" width="566" height="539" id="SciView" order="2" show_stripe_button="false" type="FLOATING" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="4" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="5" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="6" weight="0.25" />
-      <window_info active="true" anchor="right" id="Python Console" order="7" sideWeight="0.49536178" visible="true" weight="0.302589" />
+      <window_info anchor="right" id="Python Console" order="7" sideWeight="0.49536178" visible="true" weight="0.26779935" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -440,13 +455,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/exp0_preprocessing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="68" column="14" selection-start-line="68" selection-start-column="14" selection-end-line="68" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Program Files (x86)/Microsoft Visual Studio/Shared/Anaconda3_64/Lib/site-packages/pandas/core/indexing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="91">
@@ -461,29 +469,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/exp1_关联规则.py">
+    <entry file="file://$PROJECT_DIR$/exp2_K近邻分类.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-616">
-          <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
+        <state relative-caret-position="528">
+          <caret line="79" column="68" selection-start-line="79" selection-start-column="68" selection-end-line="79" selection-end-column="68" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/exp2_K近邻分类.py">
+    <entry file="file://$PROJECT_DIR$/exp0_preprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="68" column="42" selection-start-line="68" selection-start-column="42" selection-end-line="68" selection-end-column="42" />
+        <state relative-caret-position="-95">
+          <caret line="47" column="38" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exp1_关联规则.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-290">
+          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#24#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exp3_KMeans聚类.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1364">
-          <caret line="62" column="44" selection-start-line="62" selection-start-column="44" selection-end-line="62" selection-end-column="44" />
+        <state relative-caret-position="15">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
           <folding>
-            <element signature="e#25#44#0" expanded="true" />
+            <element signature="e#24#43#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -21,7 +21,7 @@ def getDistance(xlist1:list, xlist2:list):
     '''获取xlist1和xlist2欧氏距离'''
     return np.sqrt(np.sum(np.power([xlist1[i] - xlist2[i] for i in range(len(xlist1))], 2)))
 
-def getKnnClassify(x_test:pd.DataFrame, x_train:pd.DataFrame, y_train:pd.Series, k=5, y_test=None):
+def getKnnClassify(x_test:pd.DataFrame, x_train:pd.DataFrame, y_train:pd.Series, k=4, y_test=None):
     '''
     用K临近分类，根据LRMC这4个指标，把数据分为F指标下的两类
     :param x: LRMC这4列
@@ -54,20 +54,30 @@ def getKnnClassify(x_test:pd.DataFrame, x_train:pd.DataFrame, y_train:pd.Series,
 
 if __name__ == '__main__':
     filepath = './data/air_LRFMC.csv'
-    resfile = './data/knn_pred.csv'
-    trufile = './data/knn_true.csv'
-    bothfile = './data/knn_both.csv'
-    data = pd.read_csv(filepath)
+    resfile = './data/knn_pred_'
+    trufile = './data/knn_true_'
+    bothfile = './data/knn_both_'
+    data = pd.read_csv(filepath).sample(2000)
     x, y = getLabels(data)
     # 分测试集和验证集
-    x_train,x_test,y_train,y_test = train_test_split(x,y,test_size=0.1,random_state=211)
-    y_predict = getKnnClassify(x_test, x_train, y_train, 5, y_test)
-    # 计算平方差损失
-    print(mean_squared_error(y_test, y_predict))
+    x_train,x_test,y_train,y_test = train_test_split(x, y, test_size=0.1, random_state=211)
+
+    best_k = 2
+    best_score = np.inf
+    best_pred = pd.Series()
+    for k in range(2, 9):
+        y_predict = getKnnClassify(x_test, x_train, y_train, k, y_test)
+        # 计算平方差损失，并更新最佳
+        curr_score = mean_squared_error(y_test, y_predict)
+        print("k = %d, MSE损失%f" % (k, curr_score))
+        if (curr_score < best_score):
+            best_score, best_k, best_pred = curr_score, k, y_predict
+
     # 写结果
-    pd.DataFrame(pd.concat([x_test, y_test], axis=1)).to_csv(trufile)
-    pd.DataFrame(pd.concat([x_test,y_predict], axis=1)).to_csv(resfile)
-    pd.DataFrame(pd.concat([y_predict, y_test], axis=1)).to_csv(bothfile)
+    print("best k = %d, 损失%f" % (best_k, best_score))
+    pd.DataFrame(pd.concat([x_test, y_test], axis=1)).to_csv(trufile + str(best_k) +".csv")
+    pd.DataFrame(pd.concat([x_test,best_pred], axis=1)).to_csv(resfile + str(best_k) +".csv")
+    pd.DataFrame(pd.concat([best_pred, y_test], axis=1)).to_csv(bothfile + str(best_k) +".csv")
 
     # 再次读出来的时候：
     # pred_true = pd.read_csv(bothfile, index_col=0)
